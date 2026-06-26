@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: lore-ai
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        value: https://lore-ai.onrender.com
+      - key: ALLOW_DIRECT_UPGRADE
+        value: "false"
+      # Add these after creating accounts:
+      # - key: STRIPE_SECRET_KEY
+      #   sync: false
+      # - key: STRIPE_PUBLISHABLE_KEY
+      #   sync: false
+      # - key: STRIPE_WEBHOOK_SECRET
+      #   sync: false
+      # - key: STRIPE_PRICE_PRO
+      #   sync: false
+      # - key: STRIPE_PRICE_ULTRA
+      #   sync: false
+      # - key: RAZORPAY_KEY_ID
+      #   sync: false
+      # - key: RAZORPAY_KEY_SECRET
+      #   sync: false
+    disk:
+      name: astra-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1

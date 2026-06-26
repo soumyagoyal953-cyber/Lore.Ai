@@ -1,0 +1,35 @@
+{
+  "name": "lore-ai",
+  "version": "1.0.0",
+  "description": "Lore.Ai - A student-safe AI assistant created with love by Soumya Goyal",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "chatgpt",
+    "chat",
+    "student-safe"
+  ],
+  "author": "Soumya Goyal",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.2.0",
+    "razorpay": "^2.9.6",
+    "sqlite3": "^6.0.1",
+    "stripe": "^22.3.0",
+    "uuid": "^14.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "nodemon": "^3.1.14"
+  }
+}
